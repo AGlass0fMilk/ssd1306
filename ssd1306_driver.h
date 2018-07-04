@@ -173,12 +173,11 @@ public:
     // ----- BUFFER EDITING -----
 
     void clear();
-    void set_pixel(int x, int y);
-    void clear_pixel(int x, int y);
 
-    void test(void);
+//    void test(void);
 
-protected:
+    // TODO - make this protected
+//protected:
 
     void _send_command(uint8_t cmd);
     void _send_command(uint8_t* cmd, uint16_t len);

@@ -1,4 +1,4 @@
-#include "ssd1306.h"
+#include "ssd1306_driver.h"
 
 #include "platform/mbed_wait_api.h"
 
@@ -282,36 +282,12 @@ void SSD1306::initialize()
 	// set_precharge_period(2, 2);
 }
 
-//void SSD1306::update()
+//void SSD1306::test()
 //{
-//	hv_set_column_address(0, 127);
-//	hv_set_page_address(0, 7);
-//
-//	for (int i = 0; i < 1024; i++)
-//		_send_data (_screen[i]);
+//	_send_command(0xA5);
+//	wait_ms(3000);
+//	_send_command(0xA4);
 //}
-
-void SSD1306::set_pixel(int x, int y)
-{
-
-}
-
-void SSD1306::clear_pixel(int x, int y)
-{
-
-}
-
-void SSD1306::clear()
-{
-
-}
-
-void SSD1306::test()
-{
-	_send_command(0xA5);
-	wait_ms(3000);
-	_send_command(0xA4);
-}
 
 void SSD1306::_send_command(uint8_t code)
 {
